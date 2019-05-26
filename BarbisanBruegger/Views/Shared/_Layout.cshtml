@@ -13,29 +13,38 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+            @Html.ActionLink("Barbisan & Brügger AG", "Index", "Home", protocol: null, hostName: null, fragment: "page-top", routeValues: null,
+                           htmlAttributes: new { @class = "nav-link navbar-brand js-scroll-trigger" })
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            @*@if (ViewBag.Title == "HomePage")
+            {*@
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            @Html.ActionLink("About", "Index", "Home", protocol: null, hostName: null, fragment: "about", routeValues: null,
+                         htmlAttributes: new { @class = "nav-link js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Services", "Index", "Home", protocol: null, hostName: null, fragment: "services", routeValues: null,
+                          htmlAttributes: new { @class = "nav-link js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contact", "Index", "Home", protocol: null, hostName: null, fragment: "contact", routeValues: null,
+                          htmlAttributes: new { @class = "nav-link js-scroll-trigger" })
+                        </li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            @*}*@
         </div>
     </nav>
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
+        @*<hr />*@
         <!-- Footer -->
         <footer class="py-5 bg-dark">
             <div class="container">
