@@ -17,6 +17,6 @@ namespace BarbisanBruegger.Models
 
 	public class FormworkDBContext: DbContext
 	{
-		public DbSet<Formwork> Movies { get; set; }
+		public DbSet<Formwork> Formworks { get; set; }
 	}
 }

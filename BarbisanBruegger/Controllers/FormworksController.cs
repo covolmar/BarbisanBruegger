@@ -17,7 +17,7 @@ namespace BarbisanBruegger.Controllers
         // GET: Formworks
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.Formworks.ToList());
         }
 
         // GET: Formworks/Details/5
@@ -27,7 +27,7 @@ namespace BarbisanBruegger.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Formwork formwork = db.Movies.Find(id);
+            Formwork formwork = db.Formworks.Find(id);
             if (formwork == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace BarbisanBruegger.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(formwork);
+                db.Formworks.Add(formwork);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace BarbisanBruegger.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Formwork formwork = db.Movies.Find(id);
+            Formwork formwork = db.Formworks.Find(id);
             if (formwork == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace BarbisanBruegger.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Formwork formwork = db.Movies.Find(id);
+            Formwork formwork = db.Formworks.Find(id);
             if (formwork == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace BarbisanBruegger.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Formwork formwork = db.Movies.Find(id);
-            db.Movies.Remove(formwork);
+            Formwork formwork = db.Formworks.Find(id);
+            db.Formworks.Remove(formwork);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
