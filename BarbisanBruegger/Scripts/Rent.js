@@ -1,10 +1,22 @@
-﻿// Get the container element
-var listContainer = document.getElementById("rentItems");
+﻿"use strict";
 
-// Get all buttons with class="btn" inside the container
+
+// Function Declerations
+
+
+
+
+
+
+
+
+
+
+
+// Add Eventlistner to list Elements
+var listContainer = document.getElementById("rentItems");
 var items = listContainer.getElementsByTagName("li");
 
-// Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < items.length; i++) {
 	items[i].addEventListener("click", function () {
 		var current = document.getElementsByClassName("active");
@@ -15,5 +27,9 @@ for (var i = 0; i < items.length; i++) {
 		}
 
 		this.className += " active";
-	});
+	})
 }
+
+
+
+

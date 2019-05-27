@@ -33,9 +33,6 @@ namespace BarbisanBruegger
 					  "~/Content/bootstrap.css",
                       "~/Content/site.css" ) );
 
-
-			bundles.Add(new StyleBundle("~/Content/rent").Include(
-					 "~/Content/rent.css"));
 		}
 	}
 }
