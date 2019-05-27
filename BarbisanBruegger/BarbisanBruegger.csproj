@@ -173,6 +173,7 @@
     <Compile Include="Controllers\FormworksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,7 +191,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\rent.css" />
     <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\Rent_addItems.js" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -284,6 +287,7 @@
     <Content Include="Views\Formworks\Details.cshtml" />
     <Content Include="Views\Formworks\Edit.cshtml" />
     <Content Include="Views\Formworks\Index.cshtml" />
+    <Content Include="Views\Rent\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
