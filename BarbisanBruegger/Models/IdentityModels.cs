@@ -18,6 +18,30 @@ namespace BarbisanBruegger.Models
         }
     }
 
+    public class Formwork
+    {
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public string Number { get; set; }
+        public int PricePerMonth { get; set; }
+        public int Quantity { get; set; }
+
+    }
+
+
+    public class Order
+    {
+        public int Id { get; set; }
+
+        public Formwork Formwork { get; set; }
+
+        public ApplicationUser User { get; set; }
+
+        public int Quantity { get; set; }
+    }
+
+
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -29,5 +53,9 @@ namespace BarbisanBruegger.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Formwork> Formworks { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
     }
 }

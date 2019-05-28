@@ -12,7 +12,7 @@ namespace BarbisanBruegger.Controllers
 {
     public class FormworksController : Controller
     {
-        private FormworkDBContext db = new FormworkDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Formworks
         public ActionResult Index()

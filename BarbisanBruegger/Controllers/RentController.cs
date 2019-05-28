@@ -9,7 +9,7 @@ namespace BarbisanBruegger.Controllers
 {
     public class RentController : Controller
     {
-		private FormworkDBContext db = new FormworkDBContext();
+		private ApplicationDbContext db = new ApplicationDbContext();
 
 		// GET: Rent
 		public ActionResult Index()
